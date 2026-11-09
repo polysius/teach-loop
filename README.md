@@ -12,21 +12,13 @@ Progress lives in your teaching workspace (`STATE.md`, `learning-records/`, `les
 
 ## Install
 
-Clone this repo into your personal Claude Code skills folder.
-
-macOS, Linux or Git Bash:
+With Node.js installed, run:
 
 ```bash
-gh repo clone polysius/teach-loop ~/.claude/skills/teach-loop
+npx skills@latest add polysius/teach-loop -g -a claude-code
 ```
 
-Windows PowerShell:
-
-```powershell
-gh repo clone polysius/teach-loop "$HOME\.claude\skills\teach-loop"
-```
-
-If the repo is private, sign in first with `gh auth login` as polysius.
+`-g` installs it for your user, so `/teach-loop` works in every project; leave it off to install into the current project only. Leave off `-a claude-code` to choose other agents.
 
 ## Use
 
@@ -41,7 +33,7 @@ Run `/teach-loop` with no topic to resume where you left off.
 ## Update
 
 ```bash
-git -C ~/.claude/skills/teach-loop pull
+npx skills@latest update -g
 ```
 
 ## Credits
